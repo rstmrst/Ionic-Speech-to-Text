@@ -46,3 +46,9 @@ platforms/android/app/src/AndroidManifest.xml e aşağıdaki kodu ekleyip test e
     display: flex;">
   </a>
 </p>
+
+npm i @awesome-cordova-plugins/text-to-speech-advanced
+ionic cordova plugin add cordova-plugin-tts-advanced
+
+npm i @awesome-cordova-plugins/speech-recognition
+ionic cordova plugin add cordova-plugin-speechrecognition

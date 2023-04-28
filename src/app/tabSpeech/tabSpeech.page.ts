@@ -36,11 +36,11 @@ export class tabSpeechPage {
 
   async speechToTextYetkiIslemleri() {
     if (!(await this.sr.hasPermission())) {
-      this.sr.requestPermission().then(this.speechToTextBaslat, () => {
+      this.sr.requestPermission().then(this.speechToTextAction, () => {
         alert('Bu Özellik Kullanılamıyor...');
       });
     } else {
-      this.speechToTextBaslat();
+      this.speechToTextAction();
     }
   }
 
@@ -48,7 +48,7 @@ export class tabSpeechPage {
     this.speechToTextYetkiIslemleri();
   }
 
-  speechToTextBaslatv1() {
+  speechToTextAction() {
     if (this.platform.is('android') || this.platform.is('ios')) {
       this.konusDurum = true;
       this.sr
