@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="background: aquamarine">
+    <ion-title> Speech Örneği </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="small">Text to Speech - Translate</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <div style="padding: 12px">
+    <ion-button
+      fill="outline"
+      (click)="speechToTextBaslat()"
+      color="success"
+      expand="block"
+    >
+      <ion-icon name="mic-outline"></ion-icon>
+      Konuşmayı Dinle ve Yaz
+    </ion-button>
+    <br />
+    <img
+      src="{{konusDurum == false ? 'assets/mic.gif' : 'assets/mic1.gif'}}"
+      style="
+        width: 64px;
+        height: 64px;
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+      "
+    />
+    <br />
+
+    <ion-input
+      label="Söylenecek Metni Giriniz. "
+      labelPlacement="floating"
+      [counter]="true"
+      maxlength="50"
+      [(ngModel)]="okunacakMetin"
+      [clearInput]="true"
+    ></ion-input>
+
+    <br />
+    <ion-button fill="outline" (click)="metinOkumayiBaslat()" expand="block">
+      <ion-icon name="document-text-outline"></ion-icon>
+      Yazıyı Oku
+    </ion-button>
+    <p></p>
+    <h3 style="text-align: center; color: rebeccapurple">Konuşulan Metin</h3>
+    <p>{{okunanMetin}}</p>
+  </div>
+</ion-content>

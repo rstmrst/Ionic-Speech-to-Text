@@ -1,0 +1,7 @@
+{
+  "name": "exampleSpeech",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
