@@ -24,10 +24,10 @@ export class tabSpeechPage {
   }
 
   ionViewDidEnter() {
-    setTimeout(() => {
-      if (this.platform.is('android') || this.platform.is('ios'))
-        this.speechToTextYetkiIslemleri();
-    }, 500);
+    // setTimeout(() => {
+    //   if (this.platform.is('android') || this.platform.is('ios'))
+    //     this.speechToTextYetkiIslemleri();
+    // }, 500);
   }
 
   customCounterFormatter(inputLength: number, maxLength: number) {
@@ -45,6 +45,10 @@ export class tabSpeechPage {
   }
 
   speechToTextBaslat() {
+    this.speechToTextYetkiIslemleri();
+  }
+
+  speechToTextBaslatv1() {
     if (this.platform.is('android') || this.platform.is('ios')) {
       this.konusDurum = true;
       this.sr
